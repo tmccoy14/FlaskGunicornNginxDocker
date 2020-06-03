@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# first removes old docker processes that are active
+echo killing old docker processes
+docker-compose rm -fs
+
+# run docker-compose file to build flask_app and nginx containers
+echo building docker containers
+docker-compose up --build -d
